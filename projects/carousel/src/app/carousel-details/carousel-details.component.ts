@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PhotoDetails } from '@app/models/photo-details';
 import { PhotosService } from '@app/services/photos.service';
 
@@ -10,21 +10,20 @@ import { PhotosService } from '@app/services/photos.service';
 })
 export class CarouselDetailsComponent implements OnInit {
   carousel?: { title: string; photos: PhotoDetails[] };
-  currentPhotoIndex: number = 0;
-  get currentPhoto() {
-    return this.carousel?.photos[this.currentPhotoIndex];
-  }
-  constructor(private photosService: PhotosService) {}
+  currentPhoto?: PhotoDetails;
+  constructor(private photosService: PhotosService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.photosService.getPhotos().subscribe({
       next: data => {
         this.carousel = data;
+        this.currentPhoto = this.carousel.photos[0];
       },
     });
   }
 
   onPhotoChange({ newIndex }: { newIndex: number }) {
-    this.currentPhotoIndex = newIndex;
+    this.currentPhoto = this.carousel?.photos[newIndex];
+    this.cdr.detectChanges();
   }
 }

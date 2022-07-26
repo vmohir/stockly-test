@@ -28,8 +28,10 @@ export class ImageSliderComponent implements OnInit {
 
   slideLeft() {
     this.currentSlideIndex = Math.max(0, this.currentSlideIndex - 1);
+    this.photoChange.emit({ newIndex: this.currentSlideIndex });
   }
   slideRight() {
     this.currentSlideIndex = Math.min(this.images.length - 1, this.currentSlideIndex + 1);
+    this.photoChange.emit({ newIndex: this.currentSlideIndex });
   }
 }
