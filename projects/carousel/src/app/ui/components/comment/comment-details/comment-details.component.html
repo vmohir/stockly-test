@@ -1,1 +1,10 @@
-<p>carousel-comment works!</p>
+<div class="mb-3">
+  <div class="d-flex" *ngIf="comment">
+    <div class="me-2">
+      <app-user [userId]="comment!.postedBy"></app-user>
+    </div>
+    <span>{{ comment?.postedAt | date }}</span>
+  </div>
+
+  <div>{{ comment.content }}</div>
+</div>
