@@ -1,0 +1,10 @@
+.carousel-aside {
+  flex: 0 1 440px;
+  background: var(--surface1);
+  border-inline-start: 1px solid var(--border-color);
+  padding: 1rem;
+}
+.carousel-view {
+  flex: 1 0 0;
+  background: var(--surface2);
+}

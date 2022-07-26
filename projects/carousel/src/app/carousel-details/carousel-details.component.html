@@ -1,0 +1,16 @@
+<app-page-layout>
+  <article *ngIf="carousel" class="d-flex h-100">
+    <section class="carousel-view">
+      <app-carousel-view>
+        <app-image-slider
+          [sliderTitle]="carousel.title"
+          [images]="carousel.photos"
+          (photoChange)="onPhotoChange($event)"
+        ></app-image-slider>
+      </app-carousel-view>
+    </section>
+    <aside class="carousel-aside">
+      <app-carousel-info [carousel]="currentPhoto!"></app-carousel-info>
+    </aside>
+  </article>
+</app-page-layout>

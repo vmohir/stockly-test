@@ -1,0 +1,12 @@
+.page-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  flex: 0 0 110px;
+}
+.page-content {
+  flex: 1 0 auto;
+}

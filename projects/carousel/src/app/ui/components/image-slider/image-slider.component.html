@@ -1,0 +1,28 @@
+<div class="slider-wrapper">
+  <div class="slider">
+    <button class="arrow arrow-left" aria-label="slide left" (click)="slideLeft()"></button>
+
+    <div class="slides-container">
+      <ng-container *ngFor="let image of images; let i = index">
+        <div class="slide" [class.current-slide]="i === currentSlideIndex">
+          <img class="slide-image" [src]="image.src" alt="" />
+        </div>
+      </ng-container>
+    </div>
+
+    <button class="arrow arrow-right" aria-label="slide right" (click)="slideRight()"></button>
+  </div>
+
+  <div class="slider-info">
+    <div class="d-inline-block">
+      <span>{{ currentSlideIndex + 1 }}</span>
+      of
+      <span>{{ images.length }}</span>
+    </div>
+
+    <div class="d-inline-block">
+      <span class="color-text-2 me-1">in:</span>
+      <span>{{ sliderTitle }}</span>
+    </div>
+  </div>
+</div>
