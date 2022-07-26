@@ -1,0 +1,4 @@
+projects/*/src/assets/**/*
+projects/**/karma.conf.js
+projects/*/src/test.ts
+node_modules
