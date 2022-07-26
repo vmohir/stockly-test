@@ -8,7 +8,7 @@ import { Comment } from '@app/models/photo-details';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CommentsComponent implements OnInit {
-  @Input() comments: Comment[] = [];
+  @Input() comments?: Comment[] = [];
   constructor() {}
 
   ngOnInit(): void {}

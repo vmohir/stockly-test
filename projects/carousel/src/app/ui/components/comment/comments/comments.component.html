@@ -1,4 +1,4 @@
-<div class="comments-wrapper">
+<div *ngIf="comments" class="comments-wrapper">
   <div class="comments">
     <app-comment-details *ngFor="let c of comments" [comment]="c"></app-comment-details>
   </div>
