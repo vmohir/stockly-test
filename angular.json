@@ -46,13 +46,8 @@
             "polyfills": "projects/carousel/src/polyfills.ts",
             "tsConfig": "projects/carousel/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/carousel/src/favicon.ico",
-              "projects/carousel/src/assets"
-            ],
-            "styles": [
-              "projects/carousel/src/styles.scss"
-            ],
+            "assets": ["projects/carousel/src/favicon.ico", "projects/carousel/src/assets"],
+            "styles": ["projects/carousel/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -114,23 +109,15 @@
             "tsConfig": "projects/carousel/tsconfig.spec.json",
             "karmaConfig": "projects/carousel/karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/carousel/src/favicon.ico",
-              "projects/carousel/src/assets"
-            ],
-            "styles": [
-              "projects/carousel/src/styles.scss"
-            ],
+            "assets": ["projects/carousel/src/favicon.ico", "projects/carousel/src/assets"],
+            "styles": ["projects/carousel/src/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/carousel/**/*.ts",
-              "projects/carousel/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/carousel/**/*.ts", "projects/carousel/**/*.html"]
           }
         }
       }
@@ -138,8 +125,6 @@
   },
   "cli": {
     "analytics": "e33e2de2-c4db-4763-a1bb-0417a519e4a8",
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

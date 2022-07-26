@@ -2,7 +2,7 @@
   "name": "stockly-test",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve --open",
+    "start": "ng serve --open --hmr",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
@@ -38,6 +38,9 @@
     "@typescript-eslint/parser": "5.29.0",
     "eslint": "^8.18.0",
     "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "~4.7.2"
   }
 }

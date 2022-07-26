@@ -7,8 +7,5 @@ module.exports = {
       'always',
       ['feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'improve', 'revert', 'perf'],
     ],
-    'footer-max-line-length': [1, 'always', 'Infinity'],
-    'header-max-length': [1, 'always', 'Infinity'],
-    'subject-case': [0],
   },
 };
